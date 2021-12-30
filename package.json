@@ -1,0 +1,80 @@
+{
+  "name": "gk-comments-h5",
+  "version": "1.0.0",
+  "description": "h5端评论组件包",
+  "repository": "https://github.com/oooooobtf/h5-comment.git",
+  "author": "tanjia <oooooobtf@163.com>",
+  "keywords": [
+    "comment"
+  ],
+  "browser": "dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "clear": "rimraf dist/*",
+    "tree": "tree -I 'node_modules|dist|.git|build' -a -L 3",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot",
+    "build": "npm run clear && webpack --mode production --config webpack.config.js"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "sideEffects": [
+    "*.css",
+    "*.less"
+  ],
+  "dependencies": {
+    "@ant-design/pro-layout": "^6.5.0",
+    "@types/axios": "^0.14.0",
+    "antd-mobile": "^5.0.0-beta.2",
+    "axios": "^0.21.1",
+    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "dingtalk-jsapi": "^2.13.42",
+    "moment": "^2.29.1",
+    "node-sass": "^6.0.1",
+    "toolkits-ez": "^1.0.0",
+    "zarm": "^2.9.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@types/lodash": "^4.14.173",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-istanbul": "^5.2.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.3.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.2.0",
+    "gj-sso-sdk": "^2.1.2",
+    "html-webpack-plugin": "^5.3.2",
+    "less": "^3.13.1",
+    "less-loader": "^7.3.0",
+    "lodash": "^4.17.21",
+    "mini-css-extract-plugin": "^2.3.0",
+    "prettier": "^2.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "style-loader": "^0.19.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.1.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^0.6.2",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

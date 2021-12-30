@@ -1,0 +1,255 @@
+// @import '~@/styles/define.less';
+@theme: #3baf41;
+.gk-comment {
+  .gk-comment-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    .judge {
+      display: flex;
+      div {
+        margin-left: 10px;
+      }
+    }
+    .count {
+      color: @theme;
+    }
+  }
+  .gk-comment-content {
+    margin-top: 20px;
+
+    .comment-item {
+      margin-bottom: 15px;
+      // padding: 20px 0 15px 0;
+      // .primary-border-bottom();
+
+      .item-header {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .item-name {
+          // font-weight: bold;
+          font-size: 15px;
+          // color: #868686;
+        }
+
+        span {
+          margin-left: 10px;
+        }
+
+        // span:last-child {
+        //   position: absolute;
+        //   right: 10px;
+        //   color: #c3c3c3;
+        //   font-size: 14px;
+        // }
+
+        img {
+          height: 35px;
+          width: 35px;
+          border-radius: 50%;
+          background: pink;
+        }
+        .user-avatar.img {
+          background: none;
+        }
+        .user-avatar {
+          width: 40px;
+          height: 40px;
+          background: @theme;
+          border-radius: 50%;
+          display: inline-block;
+          vertical-align: middle;
+          margin-left: 0;
+          position: relative;
+          text-align: center;
+
+          .avatar {
+            white-space: nowrap;
+            color: #fff;
+            letter-spacing: 1px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            right: unset;
+            margin-left: 0;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+
+      .item-content {
+        padding-left: 43px;
+        font-size: 15px;
+        word-break: break-all;
+        margin-bottom: 15px;
+      }
+
+      .item-time {
+        margin-left: 43px;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .comment-item::after {
+      content: '';
+      width: 85%;
+      // height: 0.5px;
+      // background: rgba(0, 0, 0, 0.1);
+      display: block;
+      margin-top: 10px;
+      margin-left: 44px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transform: scaleY(0.5);
+    }
+  }
+  .gk-comment-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    // .primary-border-top();
+    // justify-content: space-between;
+    // align-items: center;
+  }
+
+  .gk-comment-input {
+    width: 60%;
+
+    div {
+      background: #f2f3f5;
+      padding: 5px 10px;
+      border-radius: 15px;
+    }
+  }
+
+  .gk-comment-tools {
+    flex: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    span {
+      margin-left: 10px;
+      display: flex;
+    }
+    .adm-image-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .gk-comment-input-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px;
+    width: 100%;
+    min-height: 110px;
+    // height: 130px;
+    display: flex;
+    align-items: center;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    /* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+    -webkit-overflow-scrolling: touch;
+    z-index: 100;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .content {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+
+    .comment-block {
+      width: 80%;
+      background: #f2f3f5;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .gk-comment-extra {
+      display: flex;
+      align-items: center;
+
+      div {
+        text-align: center;
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+    }
+
+    .adm-text-area-wrapper {
+      // textarea {
+      // width: 85%;
+      // background: #f2f3f5;
+      // border-radius: 8px;
+      // padding: 10px;
+      // margin-right: 20px;
+      border: none;
+      font-size: 15px;
+
+      textarea {
+        font-size: 15px;
+      }
+    }
+
+    .gk-comment-image {
+      margin-top: 10px;
+      display: flex;
+
+      .gk-comment-image-item {
+        width: 65px;
+        height: 70px;
+        position: relative;
+        margin-right: 10px;
+      }
+
+      .gk-comment-image-item--remove {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px;
+        background: rgba(0, 0, 0, 0.4);
+        height: 20px;
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    .comment-submit {
+      flex: auto;
+      color: @theme;
+      font-size: 16px;
+      text-align: center;
+      min-height: 75px;
+      vertical-align: middle;
+      line-height: 75px;
+    }
+
+    .comment-submit.disable {
+      color: rgba(@theme, 0.5);
+    }
+  }
+
+  .adm-mask {
+    position: absolute;
+    top: 0px;
+    bottom: 110px;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    /* 增加该属性，可以增加弹性，是滑动更加顺畅 */
+    -webkit-overflow-scrolling: touch;
+  }
+}
